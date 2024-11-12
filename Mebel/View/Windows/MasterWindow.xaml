@@ -1,0 +1,30 @@
+﻿<Window x:Class="Mebel.View.Windows.MasterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mebel.View.Windows"
+        mc:Ignorable="d"
+        Title="MasterWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid Margin="10"> 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Список материалов" Name="MaterialBtn" Click="MaterialBtn_Click"/>
+            <Separator Height="0" Width="20"/>
+            <Button Content="Список фурнитуры" Name="AccessoriesBtn" Click="AccessoriesBtn_Click"/>
+            <Separator Height="0" Width="280"/>
+            <Button Content="Выйти" Name="EnterBtn" Click="EnterBtn_Click"/>
+        </StackPanel>
+
+
+
+        <Frame Name="MasterFrame" Grid.Row="2"/>
+            
+
+    </Grid>
+</Window>

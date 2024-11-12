@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="90e45cd692f74a5b87799a294ae04f85" Name="Diagram1" ZoomLevel="37">
+        <EntityTypeShape EntityType="user24Model.Accessories" Width="1.5" PointX="0.75" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="user24Model.Equipment" Width="1.5" PointX="6" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="user24Model.HardwareSpecification" Width="1.5" PointX="3" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="user24Model.Material" Width="1.5" PointX="0.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="user24Model.OperationSpecification" Width="1.5" PointX="6" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="user24Model.Order" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="user24Model.Product" Width="1.5" PointX="0.75" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="user24Model.QualityMaterial" Width="1.5" PointX="1.5" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="user24Model.Role" Width="1.5" PointX="1.5" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="user24Model.SpecificationAssemblyUnit" Width="1.5" PointX="3" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="user24Model.SpecificationMaterials" Width="1.5" PointX="3" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="user24Model.Supplier" Width="1.5" PointX="1.5" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="user24Model.sysdiagrams" Width="1.5" PointX="3.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="user24Model.TypeAccessories" Width="1.5" PointX="1.5" PointY="26.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="user24Model.TypeEquipment" Width="1.5" PointX="3.75" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="user24Model.TypeOfMaterial" Width="1.5" PointX="1.5" PointY="41.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="user24Model.UnitOfMeasurement" Width="1.5" PointX="1.5" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="user24Model.UnitOfMeasurementMaterial" Width="1.5" PointX="1.5" PointY="43.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="user24Model.User" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <AssociationConnector Association="user24Model.FK_Accessories_Supplier" ManuallyRouted="false" />
+        <AssociationConnector Association="user24Model.FK_Accessories_TypeAccessories" ManuallyRouted="false" />
+        <AssociationConnector Association="user24Model.FK_Accessories_UnitOfMeasurement" ManuallyRouted="false" />
+        <AssociationConnector Association="user24Model.FK_HardwareSpecification_Accessories" ManuallyRouted="false" />
+        <AssociationConnector Association="user24Model.FK_SpecificationMaterials_Accessories" ManuallyRouted="false" />
+        <AssociationConnector Association="user24Model.FK_Equipment_TypeEquipment" ManuallyRouted="false" />
+        <AssociationConnector Association="user24Model.FK_HardwareSpecification_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="user24Model.FK_Material_QualityMaterial" ManuallyRouted="false" />
+        <AssociationConnector Association="user24Model.FK_Material_Supplier" ManuallyRouted="false" />
+        <AssociationConnector Association="user24Model.FK_Material_TypeOfMaterial" ManuallyRouted="false" />
+        <AssociationConnector Association="user24Model.FK_Material_UnitOfMeasurementMaterial" ManuallyRouted="false" />
+        <AssociationConnector Association="user24Model.FK_SpecificationMaterials_Material" ManuallyRouted="false" />
+        <AssociationConnector Association="user24Model.FK_OperationSpecification_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="user24Model.FK_OperationSpecification_TypeEquipment" ManuallyRouted="false" />
+        <AssociationConnector Association="user24Model.FK_Order_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="user24Model.FK_Order_User" ManuallyRouted="false" />
+        <AssociationConnector Association="user24Model.FK_Order_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="user24Model.FK_SpecificationAssemblyUnit_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="user24Model.FK_SpecificationMaterials_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="user24Model.FK_User_Role" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

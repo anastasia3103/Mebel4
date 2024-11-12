@@ -1,0 +1,73 @@
+﻿<Page x:Class="Mebel.View.Pages.AccessoriesDirectorPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Mebel.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AccessoriesDirectorPage">
+
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+
+        <ListView Name ="AccessoriesLv" SelectionChanged="AccessoriesLv_SelectionChanged" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Артикул"  DisplayMemberBinding="{Binding Article}"/>
+                    <GridViewColumn Header="Название товара"  DisplayMemberBinding="{Binding Title}"/>
+                    <GridViewColumn Header="Количество"  DisplayMemberBinding="{Binding Qty}"/>
+                    <GridViewColumn Header="Единица измерения"  DisplayMemberBinding="{Binding UnitOfMeasurementMaterial.Title}"/>
+                    <GridViewColumn Header="Закупочная цена" DisplayMemberBinding="{Binding PurchasePrice}"/>
+                    <GridViewColumn Header="Поставщик" DisplayMemberBinding="{Binding Supplier.Title}"/>
+                    <GridViewColumn Header="Качество товара"  DisplayMemberBinding="{Binding QualityMaterial.Title}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+
+        <Grid Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="Общее количество записей: " TextWrapping="Wrap" />
+                <TextBlock Name="QtyTbl" Text="" Grid.Column="2"  />
+
+                <TextBlock Text="Oбщая закупочная стоимость: " TextWrapping="Wrap" Grid.Row="2" />
+                <TextBlock Name="SumTbl" Text="" Grid.Column="2"  />
+
+                <TextBlock Text="Количество товара" TextWrapping="Wrap" Grid.ColumnSpan="3" Grid.Row="4" />
+                <TextBox  Grid.Row="6" Grid.ColumnSpan="3"/>
+
+                <Button Content="Изменить" Grid.Row="8" Name="EditBtn" Click="EditBtn_Click"/>
+                <Button Content="Удалить запись" Grid.Row="8" Grid.Column="2" Name="DelitBtn" Click="DelitBtn_Click"/>
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

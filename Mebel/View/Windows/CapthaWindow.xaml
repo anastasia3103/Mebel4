@@ -1,0 +1,24 @@
+﻿<Window x:Class="Mebel.View.Windows.CapthaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mebel.View.Windows"
+        mc:Ignorable="d"
+        Title="CapthaWindow" SizeToContent="WidthAndHeight" MinHeight="200" MinWidth="200" 
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Name="CapthaTbl" FontSize="50" FontFamily="Curlz MT" Text="" HorizontalAlignment="Center"/>
+
+        <TextBox Name="TextTb" Grid.Row="2" Height="40"/>
+        <Button Content="Ввести" Grid.Row="4" Height="28" Click="Button_Click" />
+    </Grid>
+</Window>
