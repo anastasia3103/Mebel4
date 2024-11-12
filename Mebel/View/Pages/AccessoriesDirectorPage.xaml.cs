@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mebel.AppData;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -38,6 +39,11 @@ namespace Mebel.View.Pages
         private void DelitBtn_Click(object sender, RoutedEventArgs e)
         {
 
+            var selectedItem = AccessoriesLv.SelectedItem;
+            if (selectedItem != null)
+            {
+                AccessoriesLv.Items.Remove(selectedItem);
+            }
         }
     }
 }

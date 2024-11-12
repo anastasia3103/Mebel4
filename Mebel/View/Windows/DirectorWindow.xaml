@@ -6,7 +6,22 @@
         xmlns:local="clr-namespace:Mebel.View.Windows"
         mc:Ignorable="d"
         Title="DirectorWindow" Height="450" Width="800">
-    <Grid>
-        
+
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Список материалов" Name="MaterialBtn" Click="MaterialBtn_Click"/>
+            <Separator Height="0" Width="20"/>
+            <Button Content="Список фурнитуры" Name="AccessoriesBtn" Click="AccessoriesBtn_Click"/>
+            <Separator Height="0" Width="280"/>
+            <Button Content="Выйти" Name="EnterBtn" Click="EnterBtn_Click"/>
+        </StackPanel>
+
+        <Frame Name="DirectorFrame" Grid.Row="2"/>
     </Grid>
 </Window>

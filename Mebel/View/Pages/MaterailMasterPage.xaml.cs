@@ -27,6 +27,7 @@ namespace Mebel.View.Pages
         public MaterailMasterPage()
         {
             InitializeComponent();
+            Qty();
 
             MaterialLV.ItemsSource = material;
 
@@ -43,11 +44,13 @@ namespace Mebel.View.Pages
 
         private void MaterialLV_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+           
+            
         }
 
         private void QualityCmb_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+
             QualityMaterial qualityMaterial = QualityCmb.SelectedItem as QualityMaterial;
             if (QualityCmb.SelectedIndex != 0)
             {
@@ -60,7 +63,14 @@ namespace Mebel.View.Pages
             }
         }
 
-        private void
+        private void Qty()
+        {
+            MaterialLV.ItemsSource = material;
+            int count = MaterialLV.Items.Count;
+            QtyTbl.Text = count.ToString();
+
+            
+        }
 
     }
 }

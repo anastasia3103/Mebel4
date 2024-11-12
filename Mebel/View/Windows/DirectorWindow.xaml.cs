@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mebel.AppData;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,24 @@ namespace Mebel.View.Windows
         public DirectorWindow()
         {
             InitializeComponent();
+        }
+
+        private void MaterialBtn_Click(object sender, RoutedEventArgs e)
+        {
+            FrameHelper.MasterFrame = DirectorFrame;
+            DirectorFrame.Navigate(new View.Pages.MaterialDirectorPage());
+        }
+
+        private void AccessoriesBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+            FrameHelper.MasterFrame = DirectorFrame;
+            DirectorFrame.Navigate(new View.Pages.AccessoriesDirectorPage());
+        }
+
+        private void EnterBtn_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

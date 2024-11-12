@@ -35,12 +35,17 @@
                 <RowDefinition Height="10" />
                 <RowDefinition Height="1*" />
             </Grid.RowDefinitions>
+
+
+            <ComboBox Name="QualityCmb" SelectionChanged="QualityCmb_SelectionChanged" />
             <Grid Grid.Row="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*" />
                     <ColumnDefinition Width="10" />
                     <ColumnDefinition Width="1*" />
+
                 </Grid.ColumnDefinitions>
+                
 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto" />
@@ -54,7 +59,9 @@
                     <RowDefinition Height="1*" />
                 </Grid.RowDefinitions>
 
-                <TextBlock Text="Общее количество записей: " TextWrapping="Wrap" />
+
+
+                <TextBlock Text="Общее количество записей: " TextWrapping="Wrap"/>
                 <TextBlock Name="QtyTbl" Text="" Grid.Column="2"  />
 
                 <TextBlock Text="Oбщая закупочная стоимость: " TextWrapping="Wrap" Grid.Row="2" />
