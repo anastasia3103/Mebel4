@@ -59,7 +59,7 @@
                 <TextBlock Name="QtyTbl" Text="" Grid.Column="2"  />
 
                 <TextBlock Text="Oбщая закупочная стоимость: " TextWrapping="Wrap" Grid.Row="2" />
-                <TextBlock Name="SumTbl" Text="" Grid.Column="2"  />
+                <TextBlock Name="SumTbl" Text="" Grid.Column="2" Grid.Row="2" />
 
                 
 

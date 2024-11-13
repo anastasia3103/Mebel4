@@ -59,13 +59,13 @@
                 <TextBlock Name="QtyTbl" Text="" Grid.Column="2"  />
 
                 <TextBlock Text="Oбщая закупочная стоимость: " TextWrapping="Wrap" Grid.Row="2" />
-                <TextBlock Name="SumTbl" Text="" Grid.Column="2"  />
+                <TextBlock Name="SumTbl" Text="" Grid.Column="2" Grid.Row="2"  />
 
                 <TextBlock Text="Количество товара" TextWrapping="Wrap" Grid.ColumnSpan="3" Grid.Row="4" />
-                <TextBox  Grid.Row="6" Grid.ColumnSpan="3"/>
+                <TextBox Name="EditTb" Grid.Row="6" Grid.ColumnSpan="3" />
 
                 <Button Content="Изменить" Grid.Row="8" Name="EditBtn" Click="EditBtn_Click"/>
-                <Button Content="Удалить запись" Grid.Row="8" Grid.Column="2" Name="DelitBtn" Click="DelitBtn_Click"/>
+                <Button  Content="Удалить запись" Grid.Row="8" Grid.Column="2" Name="DelitBtn" Click="DelitBtn_Click"/>
 
             </Grid>
         </Grid>

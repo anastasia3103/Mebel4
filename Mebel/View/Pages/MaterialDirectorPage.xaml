@@ -23,7 +23,6 @@
                     <GridViewColumn Header="Количество"  DisplayMemberBinding="{Binding Qty}"/>
                     <GridViewColumn Header="Единица измерения"  DisplayMemberBinding="{Binding UnitOfMeasurementMaterial.Title}"/>
                     <GridViewColumn Header="Закупочная цена" DisplayMemberBinding="{Binding PurchasePrice}"/>
-                    <GridViewColumn Header="Поставщик" DisplayMemberBinding="{Binding Supplier.Title}"/>
                     <GridViewColumn Header="Качество товара"  DisplayMemberBinding="{Binding QualityMaterial.Title}"/>
                 </GridView>
             </ListView.View>
@@ -31,7 +30,7 @@
 
         <Grid Grid.Column="2">
             <Grid.RowDefinitions>
-                <RowDefinition Height="30" />
+                <RowDefinition Height="50" />
                 <RowDefinition Height="10" />
                 <RowDefinition Height="1*" />
             </Grid.RowDefinitions>
@@ -40,12 +39,12 @@
             <ComboBox Name="QualityCmb" SelectionChanged="QualityCmb_SelectionChanged" />
             <Grid Grid.Row="2">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*" />
-                    <ColumnDefinition Width="10" />
-                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
 
                 </Grid.ColumnDefinitions>
-                
+
 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto" />
@@ -65,10 +64,10 @@
                 <TextBlock Name="QtyTbl" Text="" Grid.Column="2"  />
 
                 <TextBlock Text="Oбщая закупочная стоимость: " TextWrapping="Wrap" Grid.Row="2" />
-                <TextBlock Name="SumTbl" Text="" Grid.Column="2"  />
+                <TextBlock Name="SumTbl" Text="" Grid.Column="2" Grid.Row="2" />
 
                 <TextBlock Text="Количество товара" TextWrapping="Wrap" Grid.ColumnSpan="3" Grid.Row="4" />
-                <TextBox  Grid.Row="6" Grid.ColumnSpan="3"/>
+                <TextBox  Grid.Row="6" Grid.ColumnSpan="3" Name="EditTb"/>
 
                 <Button Content="Изменить" Grid.Row="8" Name="EditBtn" Click="EditBtn_Click"/>
                 <Button Content="Удалить запись" Grid.Row="8" Grid.Column="2" Name="DelitBtn" Click="DelitBtn_Click"/>

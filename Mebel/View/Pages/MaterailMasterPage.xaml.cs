@@ -61,6 +61,9 @@ namespace Mebel.View.Pages
             {
                 MaterialLV.ItemsSource = material;
             }
+
+
+
         }
 
         private void Qty()

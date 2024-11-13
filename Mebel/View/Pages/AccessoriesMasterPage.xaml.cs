@@ -11,6 +11,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Media.Media3D;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
@@ -27,6 +28,7 @@ namespace Mebel.View.Pages
         public AccessoriesMasterPage()
         {
             InitializeComponent();
+            Qty();
 
             AccessoriesLv.ItemsSource = accessories;
 
@@ -52,6 +54,14 @@ namespace Mebel.View.Pages
         private void DelitBtn_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+
+        private void Qty()
+        {
+            AccessoriesLv.ItemsSource = accessories;
+            int count = AccessoriesLv.Items.Count;
+            QtyTbl.Text = count.ToString();
         }
     }
 }
