@@ -22,6 +22,6 @@
             <Button Content="Выйти" Name="EnterBtn" Click="EnterBtn_Click"/>
         </StackPanel>
 
-        <Frame Name="DirectorFrame" Grid.Row="2"/>
+        <Frame Name="DirectorFrame" Grid.Row="2" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

@@ -40,6 +40,14 @@ namespace Mebel.View.Pages
             QualityCmb.SelectedValuePath = "Id";
             QualityCmb.DisplayMemberPath = "Title";
 
+
+            var sum = material.Sum(item => item.PurchasePrice);
+            SumTbl.Text = sum.ToString();
+
+
+            int count = MaterialLV.Items.Count;
+            QtyTbl.Text = count.ToString();
+
         }
 
         private void EditBtn_Click(object sender, RoutedEventArgs e)

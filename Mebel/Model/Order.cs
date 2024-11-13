@@ -14,7 +14,7 @@ namespace Mebel.Model
     
     public partial class Order
     {
-        public string Number { get; set; }
+        public int Number { get; set; }
         public Nullable<System.DateTime> Date { get; set; }
         public string TitleOrder { get; set; }
         public Nullable<int> ProductId { get; set; }
@@ -23,8 +23,10 @@ namespace Mebel.Model
         public Nullable<decimal> Price { get; set; }
         public Nullable<System.DateTime> PlanDate { get; set; }
         public string Sceheme { get; set; }
+        public Nullable<int> StatusId { get; set; }
     
         public virtual Product Product { get; set; }
+        public virtual Status Status { get; set; }
         public virtual User User { get; set; }
         public virtual User User1 { get; set; }
     }

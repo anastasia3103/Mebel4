@@ -36,6 +36,7 @@ namespace Mebel.Model
         public DbSet<Role> Role { get; set; }
         public DbSet<SpecificationAssemblyUnit> SpecificationAssemblyUnit { get; set; }
         public DbSet<SpecificationMaterials> SpecificationMaterials { get; set; }
+        public DbSet<Status> Status { get; set; }
         public DbSet<Supplier> Supplier { get; set; }
         public DbSet<sysdiagrams> sysdiagrams { get; set; }
         public DbSet<TypeAccessories> TypeAccessories { get; set; }

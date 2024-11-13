@@ -28,9 +28,16 @@ namespace Mebel.View.Pages
         public AccessoriesMasterPage()
         {
             InitializeComponent();
-            Qty();
 
             AccessoriesLv.ItemsSource = accessories;
+
+
+            var sum = accessories.Sum(item => item.PurchasePrice);
+            SumTbl.Text = sum.ToString();
+
+
+            int count = AccessoriesLv.Items.Count;
+            QtyTbl.Text = count.ToString();
 
 
 
