@@ -12,21 +12,14 @@ namespace Mebel.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class User
+    public partial class ProductOrder
     {
-        public User()
-        {
-            this.Order = new HashSet<Order>();
-        }
-    
         public int Id { get; set; }
-        public string Login { get; set; }
-        public string Password { get; set; }
-        public int RoleId { get; set; }
-        public string Fullname { get; set; }
-        public string Photo { get; set; }
+        public int ProductId { get; set; }
+        public int OrderId { get; set; }
+        public string Size { get; set; }
     
-        public virtual ICollection<Order> Order { get; set; }
-        public virtual Role Role { get; set; }
+        public virtual Order Order { get; set; }
+        public virtual Product Product { get; set; }
     }
 }

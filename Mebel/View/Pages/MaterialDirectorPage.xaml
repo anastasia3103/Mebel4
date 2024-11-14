@@ -70,7 +70,7 @@
                 <TextBox  Grid.Row="6" Grid.ColumnSpan="3" Name="EditTb"/>
 
                 <Button Content="Изменить" Grid.Row="8" Name="EditBtn" Click="EditBtn_Click"/>
-                <Button Content="Удалить запись" Grid.Row="8" Grid.Column="2" Name="DelitBtn" Click="DelitBtn_Click"/>
+                <Button Content="Удалить запись" Grid.Row="8" Grid.Column="2" Margin="5 0"  Name="DelitBtn" Click="DelitBtn_Click"/>
 
             </Grid>
 

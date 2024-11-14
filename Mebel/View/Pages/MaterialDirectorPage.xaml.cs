@@ -28,7 +28,6 @@ namespace Mebel.View.Pages
         public MaterialDirectorPage()
         {
             InitializeComponent();
-            Qty();
 
             MaterialLV.ItemsSource = material;
 
@@ -48,6 +47,7 @@ namespace Mebel.View.Pages
             int count = MaterialLV.Items.Count;
             QtyTbl.Text = count.ToString();
 
+            Qty();
         }
 
         private void EditBtn_Click(object sender, RoutedEventArgs e)
@@ -100,9 +100,10 @@ namespace Mebel.View.Pages
                 App.context.Material.Remove(selectedMaterial);
                 App.context.SaveChanges();
                 Feedback.Information("Удалено");
-                MaterialLV.ItemsSource = App.context.Material.ToList();
+                MaterialLV.ItemsSource = material;
             }
             Qty();
+
         }
 
         private void MaterialLV_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -129,7 +130,6 @@ namespace Mebel.View.Pages
             {
                 MaterialLV.ItemsSource = material;
             }
-
         }
 
     }

@@ -24,6 +24,7 @@ namespace Mebel.View.Pages
     public partial class AccessoriesDirectorPage : Page
     {
         private List<Accessories> accessories = App.context.Accessories.ToList();
+
         public AccessoriesDirectorPage()
         {
 
@@ -33,7 +34,6 @@ namespace Mebel.View.Pages
 
             var sum = accessories.Sum(item => item.PurchasePrice);
             SumTbl.Text = sum.ToString();
-
 
             int count = AccessoriesLv.Items.Count;
             QtyTbl.Text = count.ToString();

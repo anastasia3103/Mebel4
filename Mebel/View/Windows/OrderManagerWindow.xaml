@@ -5,11 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Mebel.View.Windows"
         mc:Ignorable="d"
-        Title="OrderManagerWindow" SizeToContent="WidthAndHeight"  >
+        Title="OrderManagerWindow" SizeToContent="WidthAndHeight" Width="450" >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
-            <RowDefinition Height="150"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="150  "/>
             <RowDefinition Height="80  "/>
         </Grid.RowDefinitions>
 
@@ -33,16 +34,16 @@
                     <RowDefinition Height="1*" />
                 </Grid.RowDefinitions>
 
-                <TextBlock Text="Номер заказа" />
+                <TextBlock Text="Номер заказа" Margin="0 10 0 0 " />
                 <TextBox Name="NumberOrderTb" Grid.Column="1" Height="30" />
 
                 <TextBlock Text="Наименование заказа" Grid.Row="2" />
-                <TextBox Name="NameOrder" Grid.Row="2" Grid.Column="1" Height="30"/>
+                <TextBox Name="NameOrdertb" Grid.Row="2" Grid.Column="1" Height="30"/>
 
                 <TextBlock Grid.Row="4" Text="Заказчик"/>
                 <ComboBox Name="CustomerCmb" Height="30" Grid.Row="4" Grid.Column="1" />
 
-                <TextBlock Grid.Row="6" Text="Дата заказа:" />
+                <TextBlock Grid.Row="6" Text="Плановая дата:" />
                 <DatePicker Name="DateDp" Height="30" Grid.Row="6" Grid.Column="1" IsEnabled="False"/>
 
                 <TextBlock Grid.Row="8" Text="Товар"/>
@@ -52,21 +53,15 @@
                 <TextBox Name="SizeTb" Height="30" Grid.Row="10" Grid.Column="1" />
             </Grid>
         </GroupBox>
+        <Button Content="Добавить" Grid.Row="1"  HorizontalAlignment="Left" Name="AddSize" Height="40" Margin="259,0,0,0" Width="156" Click="AddSize_Click"/>
+        <DataGrid Grid.Row="2" Name="OrderLv">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Товар" Width="*"/>
+                <DataGridTextColumn Header="Размер"  Width="*" />
+            </DataGrid.Columns>
+        </DataGrid> 
 
-        <ListView Grid.Row="1" Name="OrderLv">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn  Header="Товар" />
-                    <GridViewColumn  Header="Размер" />
-                </GridView>
-            </ListView.View>
-        </ListView>
-
-        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
-            <Button Content="Добавить" Name="AddBtn" Height="40"/>
-            <Button Content="Сохранить" Name="SaveBtn" Height="40" Margin="5"/>
-            <Button Content="Отмена" Name="NoBtn" Height="40" Margin="5"/>
-        </StackPanel>
+        <Button Content="Добавить" Grid.Row="3"  HorizontalAlignment="Left" Name="AddBtn" Height="40" Margin="259,0,0,0" Width="156" Click="AddBtn_Click"/>
     </Grid>
-  
+
 </Window>

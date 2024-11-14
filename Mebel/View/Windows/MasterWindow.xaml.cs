@@ -45,5 +45,10 @@ namespace Mebel.View.Windows
             authorizationWindow.Show();
             Close();
         }
+
+        private void OrderBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

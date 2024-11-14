@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Mebel.View.Windows"
         mc:Ignorable="d"
-        Title="DirectorWindow" Height="550" Width="900">
+        Title="DirectorWindow" Height="550" Width="1280">
 
     <Grid Margin="10">
         <Grid.RowDefinitions>
@@ -18,7 +18,9 @@
             <Button Content="Список материалов" Name="MaterialBtn" Click="MaterialBtn_Click"/>
             <Separator Height="0" Width="20"/>
             <Button Content="Список фурнитуры" Name="AccessoriesBtn" Click="AccessoriesBtn_Click"/>
-            <Separator Height="0" Width="280"/>
+            <Separator Height="0" Width="20"/>
+            <Button Content="Список заказов" Name="OrderBtn" Click="OrderBtn_Click"/>
+            <Separator Height="0" Width="550"/>
             <Button Content="Выйти" Name="EnterBtn" Click="EnterBtn_Click"/>
         </StackPanel>
 

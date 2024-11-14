@@ -18,18 +18,17 @@ namespace Mebel.Model
         {
             this.HardwareSpecification = new HashSet<HardwareSpecification>();
             this.OperationSpecification = new HashSet<OperationSpecification>();
-            this.Order = new HashSet<Order>();
+            this.ProductOrder = new HashSet<ProductOrder>();
             this.SpecificationAssemblyUnit = new HashSet<SpecificationAssemblyUnit>();
             this.SpecificationMaterials = new HashSet<SpecificationMaterials>();
         }
     
         public int Id { get; set; }
         public string Title { get; set; }
-        public string Size { get; set; }
     
         public virtual ICollection<HardwareSpecification> HardwareSpecification { get; set; }
         public virtual ICollection<OperationSpecification> OperationSpecification { get; set; }
-        public virtual ICollection<Order> Order { get; set; }
+        public virtual ICollection<ProductOrder> ProductOrder { get; set; }
         public virtual ICollection<SpecificationAssemblyUnit> SpecificationAssemblyUnit { get; set; }
         public virtual ICollection<SpecificationMaterials> SpecificationMaterials { get; set; }
     }

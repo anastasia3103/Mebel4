@@ -27,20 +27,31 @@ namespace Mebel.View.Windows
 
         private void MaterialBtn_Click(object sender, RoutedEventArgs e)
         {
-            FrameHelper.MasterFrame = DirectorFrame;
+            FrameHelper.DirectorFrame = DirectorFrame;
             DirectorFrame.Navigate(new View.Pages.MaterialDirectorPage());
         }
 
         private void AccessoriesBtn_Click(object sender, RoutedEventArgs e)
         {
 
-            FrameHelper.MasterFrame = DirectorFrame;
+            FrameHelper.DirectorFrame = DirectorFrame;
             DirectorFrame.Navigate(new View.Pages.AccessoriesDirectorPage());
         }
 
         private void EnterBtn_Click(object sender, RoutedEventArgs e)
         {
+            AuthorizationWindow authorizationWindow = new AuthorizationWindow();
+            authorizationWindow.Show();
+            Close();
+        }
+
+        private void OrderBtn_Click(object sender, RoutedEventArgs e)
+        {
+            FrameHelper.DirectorFrame = DirectorFrame;
+
+            DirectorFrame.Navigate(new View.Pages.OrderList());
 
         }
     }
 }
+

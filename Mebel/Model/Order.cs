@@ -14,10 +14,14 @@ namespace Mebel.Model
     
     public partial class Order
     {
+        public Order()
+        {
+            this.ProductOrder = new HashSet<ProductOrder>();
+        }
+    
         public int Number { get; set; }
         public Nullable<System.DateTime> Date { get; set; }
         public string TitleOrder { get; set; }
-        public Nullable<int> ProductId { get; set; }
         public Nullable<int> СustomerId { get; set; }
         public Nullable<int> ResponsibleManagerId { get; set; }
         public Nullable<decimal> Price { get; set; }
@@ -25,9 +29,8 @@ namespace Mebel.Model
         public string Sceheme { get; set; }
         public Nullable<int> StatusId { get; set; }
     
-        public virtual Product Product { get; set; }
         public virtual Status Status { get; set; }
         public virtual User User { get; set; }
-        public virtual User User1 { get; set; }
+        public virtual ICollection<ProductOrder> ProductOrder { get; set; }
     }
 }

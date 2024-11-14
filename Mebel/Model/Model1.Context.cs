@@ -32,6 +32,7 @@ namespace Mebel.Model
         public DbSet<OperationSpecification> OperationSpecification { get; set; }
         public DbSet<Order> Order { get; set; }
         public DbSet<Product> Product { get; set; }
+        public DbSet<ProductOrder> ProductOrder { get; set; }
         public DbSet<QualityMaterial> QualityMaterial { get; set; }
         public DbSet<Role> Role { get; set; }
         public DbSet<SpecificationAssemblyUnit> SpecificationAssemblyUnit { get; set; }

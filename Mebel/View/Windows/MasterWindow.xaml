@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Mebel.View.Windows"
         mc:Ignorable="d"
-        Title="MasterWindow" Height="550" Width="900" WindowStartupLocation="CenterScreen">
+        Title="MasterWindow" Height="550" Width="1280" WindowStartupLocation="CenterScreen">
     <Grid> 
         <Grid.RowDefinitions>
-            <RowDefinition Height="50" />
+            <RowDefinition Height="60" />
             <RowDefinition Height="10" />
             <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
@@ -17,9 +17,12 @@
             <Button Content="Список материалов" Name="MaterialBtn" Click="MaterialBtn_Click"/>
             <Separator Height="0" Width="20"/>
             <Button Content="Список фурнитуры" Name="AccessoriesBtn" Click="AccessoriesBtn_Click"/>
-            <Separator Height="0" Width="280"/>
+            <Separator Height="0" Width="20"/>
+            <Button Content="Список заказов" Name="OrderBtn" Click="OrderBtn_Click"/>
+            <Separator Height="0" Width="550"/>
             <Button Content="Выйти" Name="EnterBtn" Click="EnterBtn_Click"/>
         </StackPanel>
+
 
 
 

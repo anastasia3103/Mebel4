@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Mebel.View.Windows"
         mc:Ignorable="d"
-                Title="Окно авторизации" SizeToContent="WidthAndHeight" MinHeight="300"  MinWidth="400" ResizeMode="NoResize" 
+                Title="Окно регистрации" SizeToContent="WidthAndHeight" MinHeight="300"  MinWidth="400" ResizeMode="NoResize" 
     WindowStartupLocation="CenterScreen">
     <Grid Margin="10">
         <Grid.RowDefinitions>
