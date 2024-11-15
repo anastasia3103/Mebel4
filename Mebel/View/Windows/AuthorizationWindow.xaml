@@ -13,6 +13,8 @@
         <RowDefinition Height="1*" />
         <RowDefinition Height="10" />
         <RowDefinition Height="1*" />
+        <RowDefinition Height="10" />
+        <RowDefinition Height="1*" />
     </Grid.RowDefinitions>
 
     <Grid.ColumnDefinitions >
@@ -27,6 +29,12 @@
     <TextBox Name="LoginTb" Grid.Column="2"/>
     <PasswordBox Name="PasswordPb" Grid.Column="2" Grid.Row="2"/>
 
-    <Button Name="EntryBtn" Grid.Column="2" Grid.Row="4" Content="Войти" Click="EntryBtn_Click"/>
+        <TextBlock Grid.Row="4" Grid.ColumnSpan="3" >
+            <Hyperlink Click="Hyperlink_Click">
+                Нет аккаунта? Зарегистрируйтесь
+            </Hyperlink>
+        </TextBlock>
+
+    <Button Name="EntryBtn" Grid.Column="2" Grid.Row="6" Content="Войти" Click="EntryBtn_Click"/>
 </Grid>
 </Window>

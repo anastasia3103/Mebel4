@@ -1,7 +1,4 @@
-﻿using Mebel.AppData;
-using Mebel.Model;
-using Mebel.View.Windows;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,22 +16,18 @@ using System.Windows.Shapes;
 namespace Mebel.View.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для OrderList.xaml
+    /// Логика взаимодействия для OrderListCustover.xaml
     /// </summary>
-    public partial class OrderList : Page
+    public partial class OrderListCustover : Page
     {
-        List<Order> order = App.context.Order.ToList();
-        public OrderList()
+        public OrderListCustover()
         {
             InitializeComponent();
-
-            OrderLv.ItemsSource = order;
         }
 
         private void AddBtn_Click(object sender, RoutedEventArgs e)
         {
-            OrderManagerWindow orderManagerWindow = new OrderManagerWindow();
-            orderManagerWindow.ShowDialog();
+
         }
     }
 }

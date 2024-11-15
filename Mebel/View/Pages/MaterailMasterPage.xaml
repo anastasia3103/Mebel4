@@ -23,7 +23,6 @@
                     <GridViewColumn Header="Количество"  DisplayMemberBinding="{Binding Qty}"/>
                     <GridViewColumn Header="Единица измерения"  DisplayMemberBinding="{Binding UnitOfMeasurementMaterial.Title}"/>
                     <GridViewColumn Header="Закупочная цена" DisplayMemberBinding="{Binding PurchasePrice}"/>
-                    <GridViewColumn Header="Поставщик" DisplayMemberBinding="{Binding Supplier.Title}"/>
                     <GridViewColumn Header="Качество товара"  DisplayMemberBinding="{Binding QualityMaterial.Title}"/>
                 </GridView>
             </ListView.View>

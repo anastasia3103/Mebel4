@@ -5,20 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Mebel.View.Windows"
         mc:Ignorable="d"
-        Title="CapthaWindow" SizeToContent="WidthAndHeight" MinHeight="200" MinWidth="200" 
+        Title="CapthaWindow" SizeToContent="WidthAndHeight" MinHeight="300" MinWidth="300" 
         ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid Margin="10">
         <Grid.RowDefinitions>
-            <RowDefinition Height="80" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="120" />
             <RowDefinition Height="10" />
             <RowDefinition Height="40" />
             <RowDefinition Height="10" />
             <RowDefinition Height="30" />
         </Grid.RowDefinitions>
 
-        <TextBlock Name="CapthaTbl" FontSize="50" FontFamily="Curlz MT" Text="" HorizontalAlignment="Center"/>
+        <TextBlock Text="Введите текст с картинки" />
 
-        <TextBox Name="TextTb" Grid.Row="2" Height="40"/>
-        <Button Content="Ввести" Grid.Row="4" Height="28" Click="Button_Click" />
+        <TextBlock Name="CapthaTbl" FontSize="50" Grid.Row="1" FontFamily="Curlz MT" Text="" HorizontalAlignment="Center"/>
+
+        <TextBox Name="TextTb" Grid.Row="3" Height="40"/>
+        <Button Content="Ввести" Grid.Row="5" Height="30" Click="Button_Click" />
     </Grid>
 </Window>

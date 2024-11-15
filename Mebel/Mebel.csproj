@@ -158,6 +158,9 @@
     <Compile Include="View\Pages\OrderList.xaml.cs">
       <DependentUpon>OrderList.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Pages\OrderListCustover.xaml.cs">
+      <DependentUpon>OrderListCustover.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Windows\AuthorizationWindow.xaml.cs">
       <DependentUpon>AuthorizationWindow.xaml</DependentUpon>
     </Compile>
@@ -226,6 +229,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Pages\OrderList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\OrderListCustover.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

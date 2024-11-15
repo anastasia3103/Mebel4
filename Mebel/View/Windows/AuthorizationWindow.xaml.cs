@@ -35,8 +35,12 @@ namespace Mebel.View.Windows
 
         }
 
-
-
+        private void Hyperlink_Click(object sender, RoutedEventArgs e)
+        {
+            RegistrationWindow registrationWindow = new RegistrationWindow();
+            registrationWindow.Show();
+            Close();
+        }
     }
 }
 

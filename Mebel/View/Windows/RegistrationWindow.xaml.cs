@@ -65,5 +65,10 @@ namespace Mebel.View.Windows
             Close();
 
         }
+
+        private void Hyperlink_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -91,7 +91,7 @@ namespace Mebel.View.Pages
             if (res == MessageBoxResult.Yes)
             {
                     App.context.Accessories.Remove(selectedAcc);
-                    App.context.SaveChanges();
+                App.context.SaveChanges();
                     Feedback.Information("Удалено");
                     AccessoriesLv.ItemsSource = App.context.Accessories.ToList();
             }

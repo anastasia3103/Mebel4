@@ -23,7 +23,8 @@ namespace Mebel.View.Windows
     public partial class OrderManagerWindow : Window
         
     {
-        private ObservableCollection<ProductOrder> orderProd = new ObservableCollection<ProductOrder>;
+        private ObservableCollection<ProductOrder> orderProd = new ObservableCollection<ProductOrder>();
+
         public OrderManagerWindow()
         {
             InitializeComponent();
@@ -32,11 +33,11 @@ namespace Mebel.View.Windows
 
             CustomerCmb.DisplayMemberPath = "Title";
             CustomerCmb.SelectedValuePath = "Id";
-            CustomerCmb.ItemsSource=App.context.Order.ToList();
+            CustomerCmb.ItemsSource=App.context.User.ToList();
 
             ProductCmb.DisplayMemberPath = "Title";
             ProductCmb.SelectedValuePath = "Id";
-            ProductCmb.ItemsSource=App.context.Order.ToList();
+            ProductCmb.ItemsSource=App.context.User.ToList();
 
 
         }
@@ -47,19 +48,29 @@ namespace Mebel.View.Windows
             {
                 Number = Convert.ToInt32(NumberOrderTb.Text),
                 Date = DateTime.Now,
-                PlanDate= DateTime(DateDp.Text),
+                PlanDate = (DateTime)DateDp.SelectedDate,
                 TitleOrder = NameOrdertb.Text,
-                User = 3,
+                СustomerId = 3,
+                StatusId = 1,
+                ResponsibleManagerId = 1,
+                Sceheme = null,
                 ProductOrder = orderProd.Select(sp => new ProductOrder
                 {
                     ProductId = sp.Product.Id,
                     Size = sp.Size,
 
                 }
-                ).ToList(),
-
+                ).ToList(), 
 
             };
+
+            App.context.Order.Add(order);
+            App.context.SaveChanges();
+
+            Feedback.Information("Заказ добавлен");
+
+            DialogResult = true;
+            Close();
 
 
         }
@@ -87,6 +98,6 @@ namespace Mebel.View.Windows
 
             else { Feedback.Warning("Выберите продукт"); }
             }
-        }
+        
     }
 }
